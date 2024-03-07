@@ -26,7 +26,7 @@ python3 runner.py "['1','2']" "print('hello world')"
 
 ```bash
 docker build -t backend-python-runner .
-docker run -p 5001:5001 backend-python-runner runner.py "['1','2']" "print('hello world')"
+docker run -p 5001:5001 backend-python-runner python3 runner.py "['1','2']" "print('hello world')"
 ```
 
 ## Current limitations
