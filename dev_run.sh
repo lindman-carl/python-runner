@@ -2,7 +2,7 @@
 
 # because pasting in the terminal sucks
 
-test_input="['1','2']"
+test_input="1,2"
 
 user_code=$(cat <<EOF
 ants = int(input())
@@ -13,4 +13,8 @@ else:
   print("NO")
 EOF)
 
-python3 "runner.py" "$test_input" "$user_code"
+user_code2=$(cat <<EOF
+print(open(0).read())
+EOF)
+
+python3 "runner.py" "$test_input" "$user_code2"
